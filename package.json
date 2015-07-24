@@ -1,0 +1,15 @@
+{
+  "name": "opendoor",
+  "version": "0.0.1",
+  "description": "Application problem for Opendoor",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Marc Cuva",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.1",
+    "csvtojson": "^0.4.1"
+  }
+}
