@@ -77,5 +77,5 @@ app.get('/listings', function(req, res){
     
 });
 
-app.listen(8080);
+app.listen(80);
 console.log("Listening on port 8000..");
