@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 
+app.set('port', (process.env.PORT || 8080));
 
 var Converter = require("csvtojson").Converter;
 
@@ -77,5 +78,6 @@ app.get('/listings', function(req, res){
     
 });
 
-app.listen(80);
-console.log("Listening on port 8000..");
+app.listen(app.get('port'), function(){
+    console.log('Node app is running on port', app.get('port'));
+});
