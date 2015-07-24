@@ -1,13 +1,17 @@
 var express = require('express');
 var app = express();
+var path = require('path');
 
 app.set('port', (process.env.PORT || 8080));
 
+// NPM Includes
 var Converter = require("csvtojson").Converter;
-
 var fs = require("fs"); 
-
 var csvFileName = "./listings.csv";
+
+app.get('/', function(req, res){
+    res.sendFile(path.join(__dirname, '/index.html'));
+});
 
 app.get('/listings', function(req, res){
 
